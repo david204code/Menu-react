@@ -20,8 +20,9 @@ function App() {
           </div>
 
           <Categories />
-          <Menu />
-          
+          {/* pass in the props and pass in the menuItems state value */}
+          <Menu items ={menuItems}/>
+
         </section>
       </main>
     </>
