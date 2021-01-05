@@ -3,6 +3,12 @@ import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
 
+// the function to get(filter) the unique category from data
+// new Set() get first of each so no repeats!
+// change object to array with the spread operator
+const allCategories = ['all', ...new Set(items.map((item) => item.category))]
+console.log(allCategories);
+
 function App() {
 
   // state value
