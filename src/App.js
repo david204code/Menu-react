@@ -11,6 +11,10 @@ function App() {
 
   // fuunction to display filter categories and working with origin data (items)
   const filterItems = (category) => {
+    if(category === 'all') {
+      setMenuItems(items);
+      return;
+    }
     // filter the original list (items) for the property (category) that matches
     const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
