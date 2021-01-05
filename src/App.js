@@ -13,7 +13,7 @@ function App() {
 
   // state value
   const [menuItems, setMenuItems] = useState(items);
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(allCategories);
 
   // fuunction to display filter categories and working with origin data (items)
   const filterItems = (category) => {
@@ -37,7 +37,10 @@ function App() {
           </div>
           
           {/* pass the filterItems from its function */}
-          <Categories filterItems ={filterItems}/>
+          <Categories 
+            categories ={categories}
+            filterItems ={filterItems}
+          />
           {/* pass in the props and pass in the menuItems state value */}
           <Menu items ={menuItems}/>
 
